@@ -1,14 +1,8 @@
-import {React, useEffect} from 'react'
-import AOS from 'aos'
-import './App.css'
-import "aos/dist/aos.css";
+import React from 'react'
 
-// components
-
+const App = () => {
   return (
-    <> 
-      <div>project</div>
-    </>
+    <div>App</div>
   )
 }
 
