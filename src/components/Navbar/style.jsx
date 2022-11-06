@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #a83c3c;
 `
 
 export const Container = styled.div`
@@ -16,6 +16,17 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .burger{
+        display: none;
+    }
+
+    @media (max-width:960px) {
+        .burger{
+            display: block;
+            margin: 0 30px;
+        }
+    }
 `
 
 export const Logo = styled.img`
@@ -45,6 +56,10 @@ export const LinkDiv = styled.div`
             opacity: 0.7;
         }
     }
+
+    @media (max-width:960px) {
+        display: none;
+    }
 `
 
 export const ThirdDiv = styled.div`
@@ -54,31 +69,10 @@ export const ThirdDiv = styled.div`
 `
 
 export const LangSwitch = styled.div`
-    width: 100px;
-    height: 35px;
-    background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-right: 20px;
-    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    
 
-    h3{
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 17px;
-        display: flex;
-        align-items: center;
-        text-transform: uppercase;
-        // color: #FFFFFF;
-        color: black;
-    }
-
-    img{
-        width: 32px;
-        height: 32px;
-        object-fit: contain;
-    }
 `
 
 export const Button = styled.button`
@@ -92,4 +86,8 @@ export const Button = styled.button`
     font-size: 14px;
     line-height: 17px;
     cursor: pointer;
+
+    @media (max-width:600px) {
+        display: none;
+    }
 `
