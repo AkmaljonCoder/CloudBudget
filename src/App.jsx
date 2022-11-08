@@ -13,11 +13,14 @@ import Footer from './components/Footer/Footer'
 
 const App = () => {
 
-  const [language, setLanguage] = useState('')
+  const [language, setLanguage] = useState('usa');
 
   return (
     <>
-      <Navbar/>
+      <Navbar
+      language={language}
+      setLanguage={setLanguage}
+      />
     </>
   )
 }
