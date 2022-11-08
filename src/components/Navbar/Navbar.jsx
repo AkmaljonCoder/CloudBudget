@@ -21,13 +21,24 @@ const Navbar = ({language,setLanguage}) => {
     <Wrapper>
         <Container>
             <Logo src={LogoImg} />
-            <LinkDiv>
-                <h2>overview</h2>
-                <h2>features</h2>
-                <h2>technology</h2>
-                <h2>contact</h2>
-                <h2>sign up</h2>
-            </LinkDiv>
+            {
+                language === 'usa' ?
+                <LinkDiv>
+                    <h2>overview</h2>
+                    <h2>features</h2>
+                    <h2>technology</h2>
+                    <h2>contact</h2>
+                    <h2>sign up</h2>
+                </LinkDiv>
+                :
+                <LinkDiv>
+                    <h2>обзор</h2>
+                    <h2>Особенности</h2>
+                    <h2>технологии</h2>
+                    <h2>контакт</h2>
+                    <h2>регистрация</h2>
+                </LinkDiv>
+            }
             <ThirdDiv>
                 <LangSwitch className={`${show===true? 'show' : ''}`}> {/* language switcher */}
                     <button className='swt-btn' onClick={()=>setShow(!show)}>
@@ -45,7 +56,12 @@ const Navbar = ({language,setLanguage}) => {
                         </div>
                     </div>
                 </LangSwitch>
-                <Button>LOGIN</Button>
+                {
+                    language === 'usa' ?
+                    <Button>LOGIN</Button>
+                    :
+                    <Button>регистрация</Button>
+                }
                 <div onClick={toggleClosed}>
                     <Burger isClosed={isClosed} />
                 </div>
