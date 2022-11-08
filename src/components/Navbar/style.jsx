@@ -37,6 +37,7 @@ export const Logo = styled.img`
 
     @media (max-width:500px) {
         width: 120px;
+        margin-left: 20px;
     }
 `
 
@@ -86,7 +87,11 @@ export const ThirdDiv = styled.div`
         .swt-menu{
             height: 40px;
         }
-    }   
+    }
+    
+    @media (max-width:960px) {
+        margin: 0;
+    }
 `
 
 export const LangSwitch = styled.div`
@@ -177,6 +182,10 @@ export const LangSwitch = styled.div`
 
     @media (max-width:600px) {
         margin: 0;
+    }
+
+    @media (max-width:425px){
+        display: none;
     }
 
 `
