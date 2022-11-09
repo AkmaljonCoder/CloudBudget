@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Button, Container, LangSwitch, LinkDiv, Logo, ThirdDiv, Wrapper } from './style'
+import { Button, Container, LangSwitch, LinkDiv, Logo, Menus, ThirdDiv, Wrapper } from './style'
 
 import {BurgerSpin as Burger} from 'react-burger-icons' // react burger icon
 
@@ -58,7 +58,7 @@ const Navbar = ({language,setLanguage}) => {
                 </LangSwitch>
                 {
                     language === 'usa' ?
-                    <Button>LOGIN</Button>
+                    <Button>login</Button>
                     :
                     <Button>регистрация</Button>
                 }
@@ -66,6 +66,33 @@ const Navbar = ({language,setLanguage}) => {
                     <Burger isClosed={isClosed} />
                 </div>
             </ThirdDiv>
+                <Menus className={`${isClosed===true? 'show-menu' : ''}`}>
+                    {
+                        language === 'usa' ?
+                        <>
+                            <h2 style={{animationDelay:'0.1s'}}>overview</h2>
+                            <h2 style={{animationDelay:'0.2s'}}>features</h2>
+                            <h2 style={{animationDelay:'0.3s'}}>technology</h2>
+                            <h2 style={{animationDelay:'0.4s'}}>contact</h2>
+                            <h2 style={{animationDelay:'0.5s'}}>sign up</h2>
+                        </>
+                        :
+                        <>
+                            <h2 style={{animationDelay:'0.1s'}}>обзор</h2>
+                            <h2 style={{animationDelay:'0.2s'}}>Особенности</h2>
+                            <h2 style={{animationDelay:'0.3s'}}>технологии</h2>
+                            <h2 style={{animationDelay:'0.4s'}}>контакт</h2>
+                            <h2 style={{animationDelay:'0.5s'}}>регистрация</h2>
+                        </>
+                    }
+                    <div className='line'></div>
+                    <div className='language'>
+                        <h1 onClick={()=>setLanguage('usa')}>en</h1>
+                        <h1 onClick={()=>setLanguage('russia')}>ru</h1>
+                        <div className={`${language==='usa'? 'lang-usa' : 'lang-rus'}`}></div>
+                    </div>
+                </Menus>
+
         </Container>
     </Wrapper>
   )

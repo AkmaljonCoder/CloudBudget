@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #a83c3c;
+    position: fixed;
 `
 
 export const Container = styled.div`
@@ -21,10 +21,25 @@ export const Container = styled.div`
         display: none;
     }
 
+    .show-menu{
+        opacity: 1;
+        visibility: visible;
+
+        @keyframes appear {
+            0% { opacity: 0; translate: 0 50px; }
+            100% { opacity: 1; }
+        }
+    
+        h2{
+            animation: appear 0.3s both;
+        }
+    }
+
     @media (max-width:960px) {
         .burger{
             display: block;
             margin: 0 30px;
+            z-index: 3;
         }
     }
 `
@@ -191,8 +206,7 @@ export const LangSwitch = styled.div`
 `
 
 export const Button = styled.button`
-    width: 100px;
-    height: 40px;
+    padding: 10px 20px;
     background-color: rgb(0,0,0,0);
     border: 1px solid #FFFFFF;
     border-radius: 6px;
@@ -202,9 +216,88 @@ export const Button = styled.button`
     line-height: 17px;
     cursor: pointer;
     margin-left: 15px;
+    text-transform: uppercase;
 
     @media (max-width:600px) {
         display: none;
         margin:0;
     }
+`
+
+export const Menus = styled.div`
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+
+    h2{
+        color: #f9f9f9;
+        font-size: 32px;
+        cursor: pointer;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+    
+    .language{
+        display: none;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        margin-left: 53px;
+
+        h1{
+            color: #f9f9f9;
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-right: 55px;
+            z-index: 1;
+        }
+
+        .lang-usa{
+            width: 70px;
+            height: 55px;
+            background-color: #a83c3c;
+            position: absolute;
+            margin-left: -13px;
+            border-radius: 10px;
+            transition: all ease 0.5s;
+        }
+
+        .lang-rus{
+            width: 70px;
+            height: 55px;
+            background-color: #a83c3c;
+            position: absolute;
+            margin-left: 85px;
+            border-radius: 10px;
+            transition: all ease 0.5s;
+        }
+
+    }
+
+    @media (max-width:425px){
+        align-items: start;
+        gap: 15px;
+
+        h2{
+            margin-left: 40px;
+        }
+
+        .language{
+            display: flex;
+        }
+    }
+
 `
