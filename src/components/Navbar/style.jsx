@@ -21,10 +21,25 @@ export const Container = styled.div`
         display: none;
     }
 
+    .show-menu{
+        opacity: 1;
+        visibility: visible;
+
+        @keyframes appear {
+            0% { opacity: 0; translate: 0 50px; }
+            100% { opacity: 1; }
+        }
+    
+        h2{
+            animation: appear 0.3s both;
+        }
+    }
+
     @media (max-width:960px) {
         .burger{
             display: block;
             margin: 0 30px;
+            z-index: 3;
         }
     }
 `
@@ -191,8 +206,9 @@ export const LangSwitch = styled.div`
 `
 
 export const Button = styled.button`
-    width: 100px;
-    height: 40px;
+    // width: 100px;
+    // height: 40px;
+    padding: 10px 20px;
     background-color: rgb(0,0,0,0);
     border: 1px solid #FFFFFF;
     border-radius: 6px;
@@ -202,9 +218,43 @@ export const Button = styled.button`
     line-height: 17px;
     cursor: pointer;
     margin-left: 15px;
+    text-transform: uppercase;
 
     @media (max-width:600px) {
         display: none;
         margin:0;
     }
+`
+
+export const Menus = styled.div`
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(20px);
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+
+    h2{
+        color: #f9f9f9;
+        font-size: 32px;
+        cursor: pointer;
+    }
+
+    @media (max-width:425px){
+        align-items: start;
+        h2{
+            margin-left: 40px;
+        }
+    }
+
 `

@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Button, Container, LangSwitch, LinkDiv, Logo, ThirdDiv, Wrapper } from './style'
+import { Button, Container, LangSwitch, LinkDiv, Logo, Menus, ThirdDiv, Wrapper } from './style'
 
 import {BurgerSpin as Burger} from 'react-burger-icons' // react burger icon
 
@@ -16,6 +16,8 @@ const Navbar = ({language,setLanguage}) => {
     const toggleClosed = ( ) => setIsClosed(!isClosed);
 
     const [show, setShow] = useState(false);
+
+    const [menu, setMenu] = useState(false);
 
   return (
     <Wrapper>
@@ -58,7 +60,7 @@ const Navbar = ({language,setLanguage}) => {
                 </LangSwitch>
                 {
                     language === 'usa' ?
-                    <Button>LOGIN</Button>
+                    <Button>login</Button>
                     :
                     <Button>регистрация</Button>
                 }
@@ -66,6 +68,24 @@ const Navbar = ({language,setLanguage}) => {
                     <Burger isClosed={isClosed} />
                 </div>
             </ThirdDiv>
+            {
+                language === 'usa' ?
+                <Menus className={`${isClosed===true? 'show-menu' : ''}`}>
+                    <h2 style={{animationDelay:'0.1s'}}>overview</h2>
+                    <h2 style={{animationDelay:'0.2s'}}>features</h2>
+                    <h2 style={{animationDelay:'0.3s'}}>technology</h2>
+                    <h2 style={{animationDelay:'0.4s'}}>contact</h2>
+                    <h2 style={{animationDelay:'0.5s'}}>sign up</h2>
+                </Menus>
+                :
+                <Menus className={`${isClosed===true? 'show-menu' : ''}`}>
+                    <h2 style={{animationDelay:'0.1s'}}>обзор</h2>
+                    <h2 style={{animationDelay:'0.2s'}}>Особенности</h2>
+                    <h2 style={{animationDelay:'0.3s'}}>технологии</h2>
+                    <h2 style={{animationDelay:'0.4s'}}>контакт</h2>
+                    <h2 style={{animationDelay:'0.5s'}}>регистрация</h2>
+                </Menus>
+            }
         </Container>
     </Wrapper>
   )
