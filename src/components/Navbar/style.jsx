@@ -300,4 +300,14 @@ export const Menus = styled.div`
         }
     }
 
+    @media (max-width:375px) {
+        h2{
+            margin-left: 20px;
+        }
+
+        .language{
+            margin-left: 33px;
+        }
+    }
+
 `
