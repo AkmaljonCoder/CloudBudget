@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #a83c3c;
+    position: fixed;
 `
 
 export const Container = styled.div`
@@ -206,8 +206,6 @@ export const LangSwitch = styled.div`
 `
 
 export const Button = styled.button`
-    // width: 100px;
-    // height: 40px;
     padding: 10px 20px;
     background-color: rgb(0,0,0,0);
     border: 1px solid #FFFFFF;
@@ -227,7 +225,9 @@ export const Button = styled.button`
 `
 
 export const Menus = styled.div`
-    position: absolute;
+    width: 100%;
+    height: 100%;
+    position: fixed;
     z-index: 2;
     top: 0;
     left: 0;
@@ -236,8 +236,6 @@ export const Menus = styled.div`
     justify-content: center;
     align-items: center;
     gap: 32px;
-    width: 100%;
-    height: 100%;
     background: rgba(0, 0, 0, 0.8);
     backdrop-filter: blur(20px);
     opacity: 0;
@@ -248,12 +246,57 @@ export const Menus = styled.div`
         color: #f9f9f9;
         font-size: 32px;
         cursor: pointer;
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+    
+    .language{
+        display: none;
+        justify-content: start;
+        align-items: center;
+        position: relative;
+        margin-left: 53px;
+
+        h1{
+            color: #f9f9f9;
+            font-size: 32px;
+            text-transform: uppercase;
+            margin-right: 55px;
+            z-index: 1;
+        }
+
+        .lang-usa{
+            width: 70px;
+            height: 55px;
+            background-color: #a83c3c;
+            position: absolute;
+            margin-left: -13px;
+            border-radius: 10px;
+            transition: all ease 0.5s;
+        }
+
+        .lang-rus{
+            width: 70px;
+            height: 55px;
+            background-color: #a83c3c;
+            position: absolute;
+            margin-left: 85px;
+            border-radius: 10px;
+            transition: all ease 0.5s;
+        }
+
     }
 
     @media (max-width:425px){
         align-items: start;
+        gap: 15px;
+
         h2{
             margin-left: 40px;
+        }
+
+        .language{
+            display: flex;
         }
     }
 
