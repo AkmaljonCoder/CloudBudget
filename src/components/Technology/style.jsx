@@ -37,8 +37,9 @@ export const BottomDiv = styled.div`
     width: 100%;
     height: 75%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 65px;
 
     @media screen and (max-width:1027px) {
         height: auto;

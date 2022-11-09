@@ -21,6 +21,9 @@ const App = () => {
       language={language}
       setLanguage={setLanguage}
       />
+      <Home
+      language={language}
+      />
     </>
   )
 }
