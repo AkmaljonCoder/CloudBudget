@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-
+import './App.css'
 // Components
 
 import Navbar from './components/Navbar/Navbar'
@@ -24,6 +24,13 @@ const App = () => {
       <Home
       language={language}
       />
+      <Video
+      language={language}
+      />
+      {/* <Technology/>
+      <Apps/>
+      <Contact/>
+      <Footer/> */}
     </>
   )
 }

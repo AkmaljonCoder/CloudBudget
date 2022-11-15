@@ -1,14 +1,5 @@
 import styled from 'styled-components'
 
-export const Wrapper = styled.div`
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-`
-
 export const Container = styled.div`
     width: 100%;
     max-width: 1440px;
@@ -119,7 +110,7 @@ export const LangSwitch = styled.div`
         width: 100%;
         height: 40px;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         border: none;
         transition: all ease 0.3s;
