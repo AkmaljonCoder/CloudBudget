@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{ useState, useEffect} from 'react'
 import { Button, Container, LangSwitch, LinkDiv, Logo, Menus, ThirdDiv, Wrapper } from './style'
 
 import {BurgerSpin as Burger} from 'react-burger-icons' // react burger icon
@@ -17,8 +17,25 @@ const Navbar = ({language,setLanguage}) => {
 
     const [show, setShow] = useState(false);
 
+    const [scroll, setScroll] = useState(false);
+
+    const changeColor = ()=>{
+        if(window.scrollY >= 50){
+        setScroll(true)
+        }else{
+        setScroll(false)
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll',changeColor, true)
+        return ()=>{
+        window.removeEventListener('scroll',changeColor)
+        }
+    }, [])
+
   return (
-    <Wrapper>
+    <div className={scroll===false? 'navbar1' : 'navbar2'}>
         <Container>
             <Logo src={LogoImg} />
             {
@@ -94,7 +111,7 @@ const Navbar = ({language,setLanguage}) => {
                 </Menus>
 
         </Container>
-    </Wrapper>
+    </div>
   )
 }
 

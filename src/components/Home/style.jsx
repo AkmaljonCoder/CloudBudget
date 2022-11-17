@@ -34,6 +34,7 @@ export const Title = styled.h1`
     letter-spacing: 0.05em;
     text-transform: uppercase;
     color: #FFFFFF;
+    margin-bottom: 35px;
 
     @media (max-width:768px) {
         font-size: 50px;
@@ -47,7 +48,7 @@ export const Title = styled.h1`
 `
 
 export const Paragraph = styled.p`
-    max-width: 530px;
+    max-width: 520px;
     font-weight: 600;
     font-size: 24px;
     line-height: 40px;

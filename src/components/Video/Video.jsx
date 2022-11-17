@@ -4,6 +4,7 @@ import styled, { CenterDiv, Hadding1, ImageDiv, Img, InfoDiv, LeftDiv, Main, Mor
 // Import Img
 import TeamImg from './Image/TeamImage.png'
 
+
 const Video = () => {
   return (
     <Main>
@@ -25,6 +26,7 @@ const Video = () => {
         </RightDiv>
       </CenterDiv>
     </Main>
+
   )
 }
 
