@@ -99,6 +99,7 @@ export const IconsDiv = styled.div`
 export const Icons = styled.img`
     width: auto;
     height: auto;
+    cursor: pointer;
 `
 
 

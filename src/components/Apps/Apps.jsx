@@ -18,9 +18,9 @@ const Apps = () => {
             <Title>Stay focused on saving money</Title>
             <Paragraf>It is important to stay focused on saving money in any way you can. We help you monitor your spending habits so you can easily spot and cut any unnecessary expenses. Simply join today to get started!</Paragraf>
             <IconsDiv>
-              <Icons src={PlayMarket} />
-              <Icons src={AppStore} />
-              <Icons src={Windows} />
+              <Icons onClick={()=>window.open('https://play.google.com/store/games?hl=en_US&gl=US&pli=1')} src={PlayMarket} />
+              <Icons onClick={()=>window.open('https://www.apple.com/app-store/')} src={AppStore} />
+              <Icons onClick={()=>window.open('https://support.microsoft.com/ru-ru/windows')}  src={Windows} />
             </IconsDiv>
           </TextDiv>
         </LeftDiv>
