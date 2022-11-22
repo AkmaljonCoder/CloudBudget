@@ -51,7 +51,7 @@ body{
   position: fixed;
   transition: all ease 0.3s;
   background-color: #da1a43;
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px); */
 }
 
 
