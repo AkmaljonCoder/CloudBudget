@@ -27,10 +27,11 @@ const App = () => {
       <Video
       language={language}
       />
-      {/* <Technology/>
+      <Features />
+      <Technology/>
       <Apps/>
       <Contact/>
-      <Footer/> */}
+      <Footer/>
     </>
   )
 }

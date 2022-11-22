@@ -9,7 +9,9 @@ export const Main = styled.div`
     width:100%;
     height:500px;
     background-color:white;
-    /* border: 1px solid red; */
+    max-width: 1440px;
+    margin: 0 auto;
+    
 
     @media screen and (max-width:1027px) {
         height: auto;

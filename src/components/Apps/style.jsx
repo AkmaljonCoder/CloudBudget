@@ -6,6 +6,7 @@ export const Main = styled.div`
     height: 500px;
     background-color: #ED4C5C;
 
+
    @media screen and (max-width:1289px) {
         height: 700px;
    }
@@ -15,6 +16,8 @@ export const CenterDiv = styled.div`
     width: 100%;
     height: 100%;
     display: flex;
+    max-width: 1440px;
+    margin: 0 auto;
 
     @media screen and (max-width:1289px) {
         display: flex;
