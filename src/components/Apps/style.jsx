@@ -6,10 +6,10 @@ export const Main = styled.div`
     height: 500px;
     background-color: #ED4C5C;
 
-
-   @media screen and (max-width:1289px) {
-        height: 700px;
-   }
+    @media screen and (max-width:1265px) {
+        height: 650px;
+    }
+   
 `
 
 export const CenterDiv = styled.div`
@@ -19,14 +19,11 @@ export const CenterDiv = styled.div`
     max-width: 1440px;
     margin: 0 auto;
 
-    @media screen and (max-width:1289px) {
+    @media screen and (max-width:1265px) {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        gap: 70px;
-        height: auto;
-
     }
 `
 
@@ -38,14 +35,12 @@ export const LeftDiv = styled.div`
     justify-content: flex-end;
     align-items: center;
 
-    @media screen and (max-width:1236px) {
-        width: auto;
+    @media screen and (max-width:1265px) {
+        width: 95%;
+        justify-content: center;
+        align-items: center;
     }
     
-    @media screen and (max-width:613px) {
-        height: 300px;
-        width: auto;
-    }
 `
 
 
@@ -56,13 +51,18 @@ export const TextDiv = styled.div`
     flex-direction: column;
     justify-content: space-around;
 
-    @media screen and (max-width:618px) {
+    @media screen and (max-width:1265px) {
+        width: auto;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
-        width: auto;
     }
+
+    @media screen and (max-width:579px) {
+        height: 90%;
+    }
+
 `
 
 export const Title = styled.h1`
@@ -72,10 +72,15 @@ export const Title = styled.h1`
     font-size: 36px;
     color: white;
 
-    @media screen and (max-width:618px) {
-        width: 90%;
+    @media screen and (max-width:1265px) {
+        width: auto;
         text-align: center;
     }
+
+    @media screen and (max-width:579px) {
+        font-size: 30px;
+    }
+    
 `
 
 export const Paragraf = styled.p`
@@ -85,9 +90,9 @@ export const Paragraf = styled.p`
     color: white;
     font-size: 14px;
 
-    @media screen and (max-width:618px) {
-        width: 90%;
+    @media screen and (max-width:1265px) {
         text-align: center;
+        width: auto;
     }
 `
 
@@ -116,9 +121,14 @@ export const RightDiv = styled.div`
     justify-content: flex-start;
     align-items: center;
 
-    @media screen and (max-width:1236px) {
-        width: auto;
+    @media screen and (max-width:1265px) {
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
     }
+    
 `
 
 
@@ -130,9 +140,7 @@ export const ImgDiv = styled.div`
     align-items: center;
     position: relative;
 
-    @media screen and (max-width:671px) {
-        width: auto;
-    }
+    
 `
 
 export const Img1 = styled.img`

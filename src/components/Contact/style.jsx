@@ -27,6 +27,8 @@ export const CenterDiv = styled.div`
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
+        margin-top: 50px;
+        margin-bottom: 100px;
     }
 
     /* @media screen and (max-width:654px) {
@@ -44,6 +46,7 @@ export const LeftDiv = styled.div`
 
     @media screen and (max-width:1043px) {
         width: auto;
+        padding: 0px 15px 0px 15px;
     }
 
 `

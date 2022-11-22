@@ -18,12 +18,16 @@ export const CenterDiv = styled.div`
     height: 100%;
     display: flex;
 
+
     @media screen  and (max-width:1038px) {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 50px;
+        margin-top: 50px;
+        margin-bottom: 50px;
     }
+
 `
 
 export const LeftDiv = styled.div`

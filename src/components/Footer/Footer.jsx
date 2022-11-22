@@ -9,6 +9,7 @@ import Pey from './Img/Pey.png'
 const Footer = () => {
   return (
     <Main>
+      <hr />
       <CenterDiv>
         <FooterDiv>
           <Box>

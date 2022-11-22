@@ -18,6 +18,11 @@ export const Main = styled.div`
 export const CenterDiv = styled.div`
     width: 100%;
     height: 100%;
+
+    @media screen and (max-width:1040px) {
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
 `
 
 export const TopDiv = styled.div`

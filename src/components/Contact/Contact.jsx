@@ -8,6 +8,7 @@ const Contact = () => {
         <LeftDiv>
           <ContactDiv>
             <Title>Contact</Title>
+            <br /><br />
             <Pitag>Questions or concerns? Just fill out the form below and our support Questions or concerns? Questions or concerns? team will get back to you within 24 hours</Pitag>
           </ContactDiv>
         </LeftDiv>
