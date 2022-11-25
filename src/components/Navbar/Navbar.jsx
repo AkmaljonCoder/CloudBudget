@@ -95,19 +95,19 @@ const Navbar = ({language,setLanguage}) => {
                     {
                         language === 'usa' ?
                         <>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.1s'}}>overview</h2>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.2s'}}>features</h2>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.3s'}}>technology</h2>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.4s'}}>contact</h2>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.5s'}}>sign up</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(0)}} style={{animationDelay:'0.1s'}}>overview</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(600)}} style={{animationDelay:'0.2s'}}>features</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(1800)}} style={{animationDelay:'0.3s'}}>technology</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(2800)}} style={{animationDelay:'0.4s'}}>contact</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(0)}} style={{animationDelay:'0.5s'}}>sign up</h2>
                         </>
                         :
                         <>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.1s'}}>обзор</h2>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.2s'}}>Особенности</h2>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.3s'}}>технологии</h2>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.4s'}}>контакт</h2>
-                            <h2 onClick={()=>setIsClosed(false)} style={{animationDelay:'0.5s'}}>регистрация</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(0)}} style={{animationDelay:'0.1s'}}>обзор</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(600)}} style={{animationDelay:'0.2s'}}>Особенности</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(1800)}} style={{animationDelay:'0.3s'}}>технологии</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(2800)}} style={{animationDelay:'0.4s'}}>контакт</h2>
+                            <h2 onClick={()=>{setIsClosed(false) ; Scrolling(0)}} style={{animationDelay:'0.5s'}}>регистрация</h2>
                         </>
                     }
                     <div className='line'></div>
