@@ -27,11 +27,21 @@ const App = () => {
       <Video
       language={language}
       />
-      <Features />
-      <Technology/>
-      <Apps/>
-      <Contact/>
-      <Footer/>
+      <Features 
+      language={language}
+      />
+      <Technology
+      language={language}
+      />
+      <Apps
+      language={language}
+      />
+      <Contact
+      language={language}
+      />
+      <Footer
+      language={language}
+      />
     </>
   )
 }
