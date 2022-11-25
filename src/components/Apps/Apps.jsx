@@ -15,8 +15,18 @@ const Apps = () => {
       <CenterDiv>
         <LeftDiv>
           <TextDiv>
-            <Title>Stay focused on saving money</Title>
-            <Paragraf>It is important to stay focused on saving money in any way you can. We help you monitor your spending habits so you can easily spot and cut any unnecessary expenses. Simply join today to get started!</Paragraf>
+            {
+              props.language==='usa'?
+              <>
+              <Title>Stay focused on saving money</Title>
+              <Paragraf>It is important to stay focused on saving money in any way you can. We help you monitor your spending habits so you can easily spot and cut any unnecessary expenses. Simply join today to get started!</Paragraf>
+              </>
+              :
+              <>
+              <Title>Сосредоточьтесь на экономии денег</Title>
+              <Paragraf>Важно оставаться сосредоточенным на экономии денег любым возможным способом. Мы помогаем вам следить за вашими привычками расходов, чтобы вы могли легко выявлять и сокращать любые ненужные расходы. Просто присоединяйтесь сегодня, чтобы начать!</Paragraf>
+              </>
+            }
             <IconsDiv>
               <Icons onClick={()=>window.open('https://play.google.com/store/games?hl=en_US&gl=US&pli=1')} src={PlayMarket} />
               <Icons onClick={()=>window.open('https://www.apple.com/app-store/')} src={AppStore} />
