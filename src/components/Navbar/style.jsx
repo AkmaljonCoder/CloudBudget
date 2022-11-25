@@ -40,6 +40,7 @@ export const Logo = styled.img`
     height: 30px;
     object-fit: contain;
     margin-left: 30px;
+    cursor: pointer;
 
     @media (max-width:500px) {
         width: 120px;

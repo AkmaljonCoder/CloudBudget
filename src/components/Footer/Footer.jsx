@@ -6,11 +6,12 @@ import { CenterDiv, Main,FooterDiv, Box, Category, Info, Image, PoweredBy, Br} f
 import Social from './Img/SocialMedia.png'
 import Pey from './Img/Pey.png'
 
-const Footer = () => {
+const Footer = (props) => {
   return (
     <Main>
       <hr />
       <CenterDiv>
+        {props.language==='usa'?
         <FooterDiv>
           <Box>
             <Category>Address</Category>
@@ -45,6 +46,42 @@ const Footer = () => {
             </Info>
           </Box>
         </FooterDiv>
+        :
+        <FooterDiv>
+          <Box>
+            <Category>Адрес</Category>
+            <Info>
+            Пипанг Лтд, Грива Дигени, <br />
+            81-83 Башня Яковидес, 1-й этаж <br />
+            1090 Пикосия США <br />
+            </Info>
+          </Box>
+          <Box>
+            <Category>Услуги</Category>
+            <Info>
+              обзор<Br />
+              Особенности <Br />
+              технологии <Br />
+              Условия <Br />
+              Конфиденциальность <Br />
+            </Info>
+          </Box>
+          <Box>
+            <Category>Связаться</Category>
+            <Info>
+            info@cloudbudget.com <br/>
+            +1 844-721-7120 <br/>
+            <Image src={Social} />
+            </Info>
+          </Box>
+          <Box>
+            <Category>Мы поддерживаем</Category>
+            <Info>
+              <Image src={Pey} />
+            </Info>
+          </Box>
+        </FooterDiv>  
+      }
         <PoweredBy>© 2022 Farohiddin and Akmal</PoweredBy>
       </CenterDiv>
     </Main>

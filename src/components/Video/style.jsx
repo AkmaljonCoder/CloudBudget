@@ -70,8 +70,9 @@ export const InfoDiv = styled.div`
 
 export const Title = styled.h1`
     font-weight: 600;
-    font-size: 36px;
-    line-height: 43px;
+    font-size: 30px;
+    line-height: 40px;
+
 
     @media screen  and (max-width:1038px) {
         text-align:center ;

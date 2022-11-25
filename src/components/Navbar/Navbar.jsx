@@ -34,26 +34,34 @@ const Navbar = ({language,setLanguage}) => {
         }
     }, [])
 
+    //Scrol
+    const Scrolling = (value) => {
+        window.scrollTo({
+            top:value,
+            behavior: 'smooth'
+        })
+    }
+
   return (
     <div className={scroll===false? 'navbar1' : 'navbar2'}>
         <Container>
-            <Logo src={LogoImg} />
+            <Logo onClick={()=>Scrolling(0)} src={LogoImg} />
             {
                 language === 'usa' ?
                 <LinkDiv>
-                    <h2>overview</h2>
-                    <h2>features</h2>
-                    <h2>technology</h2>
-                    <h2>contact</h2>
-                    <h2>sign up</h2>
+                    <h2 onClick={()=>Scrolling(0)}>overview</h2>
+                    <h2 onClick={()=>Scrolling(600)}>features</h2>
+                    <h2 onClick={()=>Scrolling(1800)}>technology</h2>
+                    <h2 onClick={()=>Scrolling(2800)}>contact</h2>
+                    <h2 onClick={()=>Scrolling(0)}>sign up</h2>
                 </LinkDiv>
                 :
                 <LinkDiv>
-                    <h2>обзор</h2>
-                    <h2>Особенности</h2>
-                    <h2>технологии</h2>
-                    <h2>контакт</h2>
-                    <h2>регистрация</h2>
+                    <h2 onClick={()=>Scrolling(0)}>обзор</h2>
+                    <h2 onClick={()=>Scrolling(600)}>Особенности</h2>
+                    <h2 onClick={()=>Scrolling(1800)}>технологии</h2>
+                    <h2 onClick={()=>Scrolling(2800)}>контакт</h2>
+                    <h2 onClick={()=>Scrolling(0)}>регистрация</h2>
                 </LinkDiv>
             }
             <ThirdDiv>
