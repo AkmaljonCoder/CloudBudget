@@ -9,7 +9,7 @@ import BG1 from './Image/BgImg1.png'
 import BG2 from './Image/BgImg2.png'
 import Imagee from './Image/Imagee.png'
 
-const Apps = () => {
+const Apps = (props) => {
   return (
     <Main>
       <CenterDiv>
