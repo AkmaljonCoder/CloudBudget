@@ -49,7 +49,7 @@ const Navbar = ({language,setLanguage}) => {
             {
                 language === 'usa' ?
                 <LinkDiv>
-                    <h2 onClick={()=>Scrolling(0)}>overview</h2>
+                    <h2 onClick={()=>Scrolling(0)}>Uy Peyji</h2>
                     <h2 onClick={()=>Scrolling(600)}>features</h2>
                     <h2 onClick={()=>Scrolling(1800)}>technology</h2>
                     <h2 onClick={()=>Scrolling(2800)}>contact</h2>
