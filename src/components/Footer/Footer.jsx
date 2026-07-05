@@ -34,8 +34,8 @@ const Footer = (props) => {
           <Box>
             <Category>Get in Touch</Category>
             <Info>
-            info@cloudbudget.com <br/>
-            +1 844-721-7120 <br/>
+            akmaljonazimjonovcoder@gmail.com <br/>
+            +998 93 446 58 86 <br/>
             <Image src={Social} />
             </Info>
           </Box>
@@ -69,8 +69,8 @@ const Footer = (props) => {
           <Box>
             <Category>Связаться</Category>
             <Info>
-            info@cloudbudget.com <br/>
-            +1 844-721-7120 <br/>
+            akmaljonazimjonovcoder@gmail.com <br/>
+            +998 93 446 58 86 <br/>
             <Image src={Social} />
             </Info>
           </Box>
@@ -82,7 +82,7 @@ const Footer = (props) => {
           </Box>
         </FooterDiv>  
       }
-        <PoweredBy>© 2022 Farohiddin and Akmal</PoweredBy>
+        <PoweredBy>© 2022 Akmalcoder</PoweredBy>
       </CenterDiv>
     </Main>
   )
